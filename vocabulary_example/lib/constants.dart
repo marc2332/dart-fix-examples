@@ -1,1 +1,4 @@
-const List<String> examples = ['Five Random Words'];
+const List<String> examples = [
+  'Word of the day (lowerCase)',
+  'Five Random Words',
+];

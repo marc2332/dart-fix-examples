@@ -17,9 +17,23 @@ To run fix tests locally.
 dart fix --compare-to-golden
 ```
 
-### 1. Rename method [Example](lib/fix_data.yaml#L16)
+### 1. Rename parameter [Example](lib/fix_data.yaml#L16)
 ```yaml
-  - title: "Migrate to 'newMethodName'"
+  - title: "Migrate 'oldParameter to 'newParameter'"
+    date: YYYY-MM-DD
+    element:
+      uris: [ 'xyz.dart' ]
+      constructor: ''
+      inClass: 'ClassName'
+    changes:
+      - kind: 'renameParameter'
+        oldName: 'oldParameter'
+        newName: 'newParameter'
+```
+
+### 2. Rename method [Example](lib/fix_data.yaml#L27)
+```yaml
+  - title: "Migrate 'newMethodName to 'oldMethodName'"
     date: YYYY-MM-DD
     element:
       uris: [ 'xyz.dart' ]

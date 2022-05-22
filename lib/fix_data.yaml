@@ -13,7 +13,18 @@
 
 version: 1
 transforms:
-  - title: "Migrate to 'generateFiveWords'"
+  - title: "Migrate 'getLowerCase' to 'lowerCase'"
+    date: 2022-01-20
+    element:
+      uris: [ 'vocabulary.dart' ]
+      constructor: ''
+      inClass: 'WordOfTheDay'
+    changes:
+      - kind: 'renameParameter'
+        oldName: 'getLowerCase'
+        newName: 'lowerCase'
+
+  - title: "Migrate 'generateFiveWords' to 'generateFiveWords'"
     date: 2022-05-22
     element:
       uris: [ 'vocabulary.dart' ]

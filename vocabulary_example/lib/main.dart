@@ -28,27 +28,31 @@ class VocabularyExample extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    WordOfTheDay wordOfTheDay = WordOfTheDay(getLowerCase: true);
     Vocabulary vocabulary = Vocabulary();
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Vocabulary Example'),
       ),
-      body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Center(
-              child: ElevatedButton(
+      body: Center(
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
                 onPressed: () {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
                       builder: (_) {
-                        List<String> words = vocabulary.generateFiveWords();
+                        String word = wordOfTheDay.randomWord();
                         return WordsPage(
                           title: examples[0],
-                          child: WordList(words: words),
+                          child: Text(
+                            word,
+                            style: Theme.of(context).textTheme.headlineLarge,
+                          ),
                         );
                       },
                     ),
@@ -56,8 +60,26 @@ class VocabularyExample extends StatelessWidget {
                 },
                 child: Text(examples[0]),
               ),
-            ),
-          ],
+              const SizedBox(height: 10),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) {
+                        List<String> words = vocabulary.generate5Words();
+                        return WordsPage(
+                          title: examples[1],
+                          child: WordList(words: words),
+                        );
+                      },
+                    ),
+                  );
+                },
+                child: Text(examples[1]),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -74,7 +96,7 @@ class WordsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: child,
+      body: Center(child: child),
     );
   }
 }

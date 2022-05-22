@@ -1,6 +1,9 @@
 import 'package:vocabulary/vocabulary.dart';
 
 void main () {
+  WordOfTheDay wordOfTheDay = WordOfTheDay();
+  wordOfTheDay = WordOfTheDay(lowerCase: true);
+
   Vocabulary vocabulary = Vocabulary();
   vocabulary.generateFiveWords();
 }
