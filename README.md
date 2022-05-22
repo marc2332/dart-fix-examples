@@ -20,7 +20,7 @@ dart fix --compare-to-golden
 ### 1. Rename method [Example](lib/fix_data.yaml#L16)
 ```yaml
   - title: "Migrate to 'newMethodName'"
-    date: 2022-05-22
+    date: YYYY-MM-DD
     element:
       uris: [ 'xyz.dart' ]
       method: 'oldMethodName'
