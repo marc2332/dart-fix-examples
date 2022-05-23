@@ -1,6 +1,6 @@
-## Data-driven fix Examples
+## Dart fix Examples
 
-A collection of samples that illustrate how Dart's Data-driven fix works.
+A collection of samples that illustrate how Dart fix works.
 
 Read more in [Data-driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes#data-driven-fixes) wiki page.
 
