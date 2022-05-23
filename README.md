@@ -5,12 +5,14 @@ A collection of samples that illustrate how Dart fix works.
 Read more in [Data-driven Fixes](https://github.com/flutter/flutter/wiki/Data-driven-Fixes#data-driven-fixes) wiki page.
 
 # Project structure
-├── vocabulary (package)  
-│   ├── lib  
-│   │   ├── fix_data.yaml (data file)  
-│   │   ├── vocabulary.dart (code)  
-│   ├── test_fixes (test fixes)  
-│   ├── vocabulary_example (app)  
+```
+vocabulary/ (package)  
+├─ lib/  
+│   ├─ fix_data.yaml  (data file)  
+│   ├─ vocabulary.dart (code)  
+├─ test_fixes/ (test fixes)  
+├─ vocabulary_example/ (app)  
+```
 
 To run fix tests locally.
 ```sh
